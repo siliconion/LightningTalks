@@ -1,17 +1,22 @@
 $(document).ready(function () {
     function get_data_update_div(url, target_div) {
-        var settings = {
-            "url": url,
-            "method": "GET"
-        }
 
-        $.ajax(settings).done(function (response) {
-            console.log("btn")
-            $(target_div + " .result").text(response)
-        }).fail(function (jqXHR, textStatus, errorThrown) {
-            $(target_div + " .result").text(textStatus)
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                response = "Status: " + this.status + ", Response: " + this.responseText
+                $(target_div + " .result").text(response)
+                console.log(this.responseText);
+                console.log(this);
+            }
         });
-        ;
+
+        xhr.open("GET", url);
+
+        xhr.send();
+
     }
 
     $('#same_origin button').click(function () {

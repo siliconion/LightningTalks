@@ -2,11 +2,16 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 8002;
 var morgan = require('morgan')
-
 app.use(morgan('combined'))
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "http://localhost:8000");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Credentials", "true");
+    next();
+});
+
 app.get('/get_server_info', function (req, res) {
-    host = req.get('host')
     var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     console.log(fullUrl)
     res.send("This is the frontend server. Port: " + port)
