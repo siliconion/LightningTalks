@@ -1,0 +1,14 @@
+button {
+    width: 200px
+}
+
+.example {
+    padding: 10px;
+    font-size: 14px;
+    margin: 10px;
+    background: #EEE;
+}
+
+.result {
+    padding: 8px 12px;
+}
