@@ -2,7 +2,7 @@
 
 Sometimes when calling a third party API from the front-end javascript, there's nothing, but this in the developer console:
 
-<img src="https://user-images.githubusercontent.com/12662081/29005408-bfeb1d60-7aa0-11e7-9557-91bc2517846a.png" alt="No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:8000' is therefore not allowed access." style="max-width: 200px;"/>
+<img src="https://user-images.githubusercontent.com/12662081/29005408-bfeb1d60-7aa0-11e7-9557-91bc2517846a.png" alt="No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:8000' is therefore not allowed access." style="max-width: 80%;"/>
 
 ##### What is "Access-Control-Allow-Origin"?
 The `Access-Control-Allow-Origin` header is part of the Cross-Origin Resource Sharing (CORS) standard.
@@ -12,7 +12,8 @@ CORS is is a way to get around Same Origin Policy.
 
 ##### What is Same Origin Policy?
 [Same Origin Policy](https://en.wikipedia.org/wiki/Same-origin_policy) stops the browser to access data if the data and the web page and the data comes from the different origin. 
-<img src="https://user-images.githubusercontent.com/12662081/29013622-d0d47f22-7b09-11e7-8a55-09deb4ea392e.png"  style="max-width: 200px;"/>
+
+<img src="https://user-images.githubusercontent.com/12662081/29013622-d0d47f22-7b09-11e7-8a55-09deb4ea392e.png"  style="max-width: 50%;"/>
 
 ##### Wy do we need Same Origin Policy?
 This is to prevent advanced cross-site request forgery (CSRF). 
