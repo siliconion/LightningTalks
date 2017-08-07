@@ -1,10 +1,10 @@
-#Lightening Talks Demos
+# Lightening Talks Demos
 
-Here are all the demo code for my lightening talks. 
+This repo includes all the demo code for my lightening talks. 
 
 Each folder includes one topic.
 
-Topics:
-* CORS
+#### Index:
+* [Cross-Origin Resource Sharing (CORS)](https://github.com/siliconion/LighteningTalks/tree/master/cors#cors)
 
 

@@ -13,9 +13,9 @@ CORS is is a way to get around Same Origin Policy.
 ##### What is Same Origin Policy?
 [Same Origin Policy](https://en.wikipedia.org/wiki/Same-origin_policy) stops the browser to access data if the data and the web page and the data comes from the different origin. 
 
-<img src="https://user-images.githubusercontent.com/12662081/29013622-d0d47f22-7b09-11e7-8a55-09deb4ea392e.png"  width="50%;"/>
+<img src="https://user-images.githubusercontent.com/12662081/29013622-d0d47f22-7b09-11e7-8a55-09deb4ea392e.png"  width="60%;"/>
 
-##### Wy do we need Same Origin Policy?
+##### Why do we need Same Origin Policy?
 This is to prevent advanced cross-site request forgery (CSRF). 
 To prevent basic CSRF, servers issues an one-time key along with forms. With same-origin policy, the on-time key cannot be access by the phising site. 
 
@@ -23,7 +23,7 @@ To prevent basic CSRF, servers issues an one-time key along with forms. With sam
 Yes it is. Most sites do not need this level of security. If you run a CDN, you do NOT want browser to intercept your content. That's where CORS comes to rescue.
 
 
-#### Demo
+### Demo
 Spin up 3 servers by executing these commends in 3 different terminal tabs:
 ```
 node frontend_server.js
