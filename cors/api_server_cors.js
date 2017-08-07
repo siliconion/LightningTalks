@@ -11,10 +11,8 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.get('/get_server_info', function (req, res) {
-    var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-    console.log(fullUrl)
-    res.send("This is the frontend server. Port: " + port)
+app.get('/get_info', function (req, res) {
+    res.send("Response from CORS server. Port: " + port)
 })
 
 app.listen(port);

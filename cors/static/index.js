@@ -8,7 +8,6 @@ $(document).ready(function () {
             if (this.readyState === 4) {
                 response = "Status: " + this.status + ", Response: " + this.responseText
                 $(target_div + " .result").text(response)
-                console.log(this.responseText);
                 console.log(this);
             }
         });
@@ -20,14 +19,14 @@ $(document).ready(function () {
     }
 
     $('#same_origin button').click(function () {
-        get_data_update_div("http://localhost:8000/get_server_info", "#same_origin")
+        get_data_update_div("http://localhost:8000/get_info", "#same_origin")
     })
 
     $('#non_cors_api button').click(function () {
-        get_data_update_div("http://localhost:8001/get_server_info", "#non_cors_api")
+        get_data_update_div("http://localhost:8001/get_info", "#non_cors_api")
     })
 
     $('#cors_api button').click(function () {
-        get_data_update_div("http://localhost:8002/get_server_info", "#cors_api")
+        get_data_update_div("http://localhost:8002/get_info", "#cors_api")
     })
 })
