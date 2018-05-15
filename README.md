@@ -1,6 +1,6 @@
-# Lightening Talks Demos
+# Lightning Talks Demos
 
-This repo includes all the demo code for my lightening talks. 
+This repo includes all the demo code for my lightning talks. 
 
 Each folder includes one topic.
 
