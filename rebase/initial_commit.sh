@@ -1,6 +1,4 @@
-rm -rf .git
-rm main.js
-rm feature*.md
+./cleanup.sh
 
 git init
 echo "git test" > main.js
