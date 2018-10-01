@@ -1,23 +1,48 @@
 ./cleanup.sh
 
 git init
-echo "git test" > main.js
 git add .
 git commit -m "initial commit"
 
-./add_commit.sh main.js "main code 1"
+cp src/master_1.js ./main.js
+git add .
+git commit -m "create main commit 1"
 
-git co -b feature_c
-./add_commit.sh main.js "feature code 1"
-./add_commit.sh main.js "feature code 2"
-./add_commit.sh main.js "feature code 3"
-
-git co master
 git co -b feature_nc
-./add_commit.sh feature.js "feature code 1"
-./add_commit.sh feature.js "feature code 2"
-./add_commit.sh feature.js "feature code 3"
+
+cp src/feature_nc_1.js ./main.js
+git add .
+git commit -m "create non-conflicting feature, commit 1"
+
+cp src/feature_nc_2.js ./main.js
+git add .
+git commit -m "create non-conflicting feature, commit 2"
+
+cp src/feature_nc_3.js ./main.js
+git add .
+git commit -m "create non-conflicting feature, commit 3"
 
 git co master
-./add_commit.sh main.js "main code 2"
-./add_commit.sh main.js "main code 3"
+git co -b feature_c
+
+cp src/feature_c_1.js ./main.js
+git add .
+git commit -m "create conflicting feature, commit 1"
+
+cp src/feature_c_2.js ./main.js
+git add .
+git commit -m "create conflicting feature, commit 2"
+
+cp src/feature_c_3.js ./main.js
+git add .
+git commit -m "create conflicting feature, commit 3"
+
+git co master
+
+cp src/master_2.js ./main.js
+git add .
+git commit -m "create main commit 2"
+
+cp src/master_3.js ./main.js
+git add .
+git commit -m "create main commit 3"
