@@ -50,3 +50,5 @@ source <env name>/bin/activate
 
 ## pyenv
 pyenv is mainly for switching between multiple Python versions . It intercepts Python commands using shim executables injected into your PATH.
+
+## pipenv
